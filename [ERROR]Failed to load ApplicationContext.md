@@ -12,7 +12,8 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 ##### error 발생 원인과 해결 (산피셜)
 
 - 오류내용을 보면 `ApplicationContext`을 로드할 수 없다고 나온다.
-- 코드 상에 ApplicationContext을 쓰는 코드가 있는데, 그 코드에는 @autowired 어노테이션이 붙어있다. (@autowired - 스프링이 IoC 컨테이너에서 상황에 맞게 Bean을 자동으로 주입. 단어 그대로 자동 연걸!)
+- 코드 상에 ApplicationContext을 쓰는 코드가 있는데, 그 코드에는 @autowired 어노테이션이 붙어있다. 
+  (@autowired - 스프링이 IoC 컨테이너에서 상황에 맞게 Bean을 자동으로 주입. 단어 그대로 자동 연걸!)
 - 즉 ApplicationContext를 쓰려면 스프링 컨테이너를 사용해야한다
 
 - 스프링의 컨테이너를 사용하지 않으면 mock을 써도 무관하지만 스프링의 컨테이너를 쓰려면 mockBean 어노테이션을 꼭 사용해야한다.
