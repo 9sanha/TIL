@@ -16,6 +16,13 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
   (@autowired - 스프링이 IoC 컨테이너에서 상황에 맞게 Bean을 자동으로 주입. 단어 그대로 자동 연걸!)
 - 즉 ApplicationContext를 쓰려면 스프링 컨테이너를 사용해야한다
 
+``` java
+// MVC TEST 클래스 상단에 추가
+@MockBean(JpaMetamodelMappingContext.class)
+```
+
+
+
 - 스프링의 컨테이너를 사용하지 않으면 mock을 써도 무관하지만 스프링의 컨테이너를 쓰려면 mockBean 어노테이션을 꼭 사용해야한다.
 - mock과는 다르게 mockBean은 Spring framework(org.springframework.boot.test.mock.mockito) 내에 있기 때문에 스프링 영역의 컨테이너에 객체를 등록해준다! (MockBean은 Spring context 영역)
 - 때문에 Autowired가 정상 작동하여 test 코드를 실행했을 때 ApplicationContext를 정상적으로 로드해준다.
