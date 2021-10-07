@@ -34,15 +34,10 @@
 
 # 🧐 배운 것 🧐
 
-### [SOLID]객체지향 설계 5원칙
+### 제목
 
-<details><summary>CLICK ME</summary>
-    내용
-</d
+##### 부제
 
-<details><summary>CLICK ME</summary>
-    내용
-</details>
 
 - 
 
